@@ -1,0 +1,10 @@
+site_name: Moja dokumentacija aplikacije X
+site_description: Tehnicka i funkcionalna dokumentacija sistema
+theme:
+  name: readthedocs
+
+nav:
+  - Pocetna: index.md
+  - Kalkulator: kalkulator.md
+  - Bankomat: bankomat.md
+  - Shop Utils: shop_utils.md
