@@ -1,0 +1,120 @@
+login
+Regularan scenario: 
+Implementacija ekrana, povezivanje sa bekendom i test da li radi
+
+TDD
+Unos validnog emaila i sifre, ocekujem uspesan login
+Unos pogresne sifre, ocekujem prikaz greske
+Ostavljanje praznih polja, ocekujem prikaz validacione poruke
+
+Use cases
+Gherkin zapis
+Given - Ulazni koraci
+Korisnik je na login stranici, uneo je email ... i sifru ... (ispravni podaci
+When - Akcija
+Klikne na taster Uloguj se
+Then - Ocekivani rezultat
+Korisnik je uspesno pristupio sistemu - otvoren je ekran...
+
+OČEKIVANJA
+Obračun popusta:
+Ako je cena 1000 dinara, obračunavam popust 10% očekujm 900 dinara
+Ako je cena 1000 dinara, popust 0%, očekujem 1000 dinara
+Ako je popust negativan, sistem treba da odbije takav unos.
+
+POKRETANJE TESTOVA
+kada promenimo kod
+nova funkcionalnost
+refaktor
+
+RED - pišemo test koji pada
+GREEN - pisanje minimalnog koda da test prođe
+REFACTOR BLUE - sređujem kod i testovi moraju i dalje da prolaze
+
+
+Provera da li je korisnik punoletan
+SPECIFIKACIJA:
+Ako korisnik ima 18 ili više, treba da se prikaže sadržaj
+Ako korisnik ima manje od 18 godina, sadržaj se ne prikazuje
+Neispravan unos 0 i manje
+
+OČEKIVANJA:
+Za godine 18 očekujem true. 
+Za godine 17 očekujem false. - RED
+Za 0 očekujem false - RED
+Za negativan broj očekujem false - RED
+
+GREEN
+Dovoljan kod da test prođe
+funkcija koja vraća true
+-> Refaktor i dolazak do funkcije koja proverava godine
+
+Cena manja od 3000 dostava je 400
+Cena 3000 ili veća cena dostave je besplatna
+
+OČEKIVANJE:
+Vrednost korpe 1000 dinara, očekujem dostavu 400
+Vrednost korpe 2999, očekujem 400
+Vrednost korpe je 5000, očekujem 0
+
+IMPL./REFAKTOR
+Funkcija koja za vrednosti ispod 3000 vraća 400
+Dodatak - za vrednosti >= 3000 vraća 0
+
+
+Provera da li je email validan:
+test@gmail.com - Validno 
+testgmail.com - ocekujem nevalidno
+test@ - ocekujem nevalidno - nema domena
+@gmail.com - nedostaje korisnicki deo - nevalidno
+"" - nevalidno
+test @ gmail . com - validno ili nevalidno - u zavisnosti od odluke
+
+
+
+
+
+BDD
+Korisnik treba da moze da koristi kupon.
+product owner, Qa, developer, klijent
+
+Given - When - Then
+
+UC 1
+Given korisnik ima proizvode u korpi
+And korisnik ima validan kupon
+When korisnik unese kupon
+Then ukupna cena se umanjuje za vrednost kupona
+
+UC 2
+Given korisnik ima proizovde u korpi
+And kupon je istekao
+When korisnik unese kupon
+Then sistem prikazuje gresku da kupon ne vazi
+
+
+
+TDD
+DDT
+BDD
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
