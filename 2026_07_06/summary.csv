@@ -1,0 +1,5 @@
+Label,# Samples,Average,Min,Max,Std. Dev.,Error %,Throughput,Received KB/sec,Sent KB/sec,Avg. Bytes
+HTTP Request - Get Todos List,15,63,52,98,10.64,0.000%,15.15152,376.54,2.32,25448.0
+HTTP Request - TODO by ID,15,19,16,31,3.89,0.000%,16.55629,19.77,2.57,1223.0
+Debug Sampler,15,0,0,1,0.49,0.000%,16.89189,6.37,0.00,386.4
+TOTAL,45,27,0,98,27.26,0.000%,44.51039,392.04,4.58,9019.1
